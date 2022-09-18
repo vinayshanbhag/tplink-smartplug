@@ -1,6 +1,6 @@
 ## TPLink SmartPlug
 
-Encrypted commands can be sent to SmartPlug IP on port 9999. Payload is encrypted using XOR autokey cipher (key=171) and prefixed with length (1st 4 bytes) in big-endian netwrok byte order. xor_autokey_cipher.c contains encryption and decryption functions.
+Encrypted commands can be sent to SmartPlug IP on port 9999. Payload is encrypted using XOR autokey cipher (key=171) and prefixed with length (1st 4 bytes) in big-endian netwrok byte order. [xor_autokey_cipher.c](https://github.com/vinayshanbhag/tplink-smartplug/blob/main/xor_autokey_cipher.c) contains encryption and decryption functions.
 
 e.g. If the command is ```{"system":{"set_relay_state":{"state":0}}}```, the payload will be 
 
